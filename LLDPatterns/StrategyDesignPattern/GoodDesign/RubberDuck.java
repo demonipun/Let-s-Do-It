@@ -1,4 +1,4 @@
-package LLD.StrategyDesignPattern.GoodDesign;
+package LLDPatterns.StrategyDesignPattern.GoodDesign;
 
 public class RubberDuck extends Duck {
  
