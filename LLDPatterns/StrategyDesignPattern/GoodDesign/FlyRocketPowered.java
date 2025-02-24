@@ -1,4 +1,4 @@
-package LLDPatterns.StrategyDesignPattern.GoodDesign;
+package lldpatterns.strategydesignpattern.gooddesign;
 
 public class FlyRocketPowered implements FlyBehavior {
     public void fly() {

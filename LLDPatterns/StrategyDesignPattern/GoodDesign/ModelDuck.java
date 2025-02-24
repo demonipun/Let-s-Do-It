@@ -1,4 +1,4 @@
-package LLDPatterns.StrategyDesignPattern.GoodDesign;
+package lldpatterns.strategydesignpattern.gooddesign;
 
 public class ModelDuck extends Duck {
     public ModelDuck() {

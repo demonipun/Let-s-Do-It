@@ -1,4 +1,4 @@
-package LLDPatterns.StrategyDesignPattern.GoodDesign;
+package lldpatterns.strategydesignpattern.gooddesign;
 
 public class FlyWithWings implements FlyBehavior {
     public void fly() {
