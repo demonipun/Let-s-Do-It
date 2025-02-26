@@ -10,12 +10,21 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		weatherData.registerObserver(this);
     }
 
+	// TYPE-1: Push update by Subject to all the Observers (For the Subject to send notifications)
     public void update(float temp, float humidity, float pressure) {
         lastPressure = currentPressure;
 		currentPressure = pressure;
 
 		display();
     }
+
+	// TYPE-2: Pull update by Observers from the Subject (For an Observer to receive notifications)
+    // public void update() {
+    //     lastPressure = currentPressure;
+	// 	currentPressure = weatherData.getPressure();
+
+    //     display();
+    // }
 
     public void display() {
 		System.out.print("Forecast: ");

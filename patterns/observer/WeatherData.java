@@ -20,6 +20,8 @@ public class WeatherData implements Subject {
         observers.remove(ob);
     }
 
+    // setMeasurements -> measurementsChanged -> notifyObservers
+    // TYPE-1: Push update by Subject to all the Observers (For the Subject to send notifications) [notifyObservers() needed only in TYPE-1]
     public void notifyObservers() {
         for(Observer observer: observers) {
             observer.update(temperature, humidity, pressure);
@@ -38,16 +40,16 @@ public class WeatherData implements Subject {
         measurementsChanged();
     }
 
-    // getter methods
-    public float getTemperature() {
-		return temperature;
-	}
+    // Getter methods - FOR - TYPE-2: Pull update by Observers from the Subject (For an Observer to receive notifications)
+    // public float getTemperature() {
+	// 	return temperature;
+	// }
 	
-	public float getHumidity() {
-		return humidity;
-	}
+	// public float getHumidity() {
+	// 	return humidity;
+	// }
 	
-	public float getPressure() {
-		return pressure;
-	}
+	// public float getPressure() {
+	// 	return pressure;
+	// }
 }

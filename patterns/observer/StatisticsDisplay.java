@@ -12,6 +12,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 		weatherData.registerObserver(this);
 	}
 
+	// TYPE-1: Push update by Subject to all the Observers (For the Subject to send notifications)
     public void update(float temp, float humidity, float pressure) {
         tempSum += temp;
 		numReadings++;
@@ -26,6 +27,22 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 
 		display();
     }
+
+	// TYPE-2: Pull update by Observers from the Subject (For an Observer to receive notifications)
+    // public void update() {
+    //     tempSum += weatherData.getTemperature();
+	// 	numReadings++;
+
+	// 	if (temp > maxTemp) {
+	// 		maxTemp = temp;
+	// 	}
+ 
+	// 	if (temp < minTemp) {
+	// 		minTemp = temp;
+	// 	}
+
+	// 	display();
+    // }
 
     public void display() {
 		System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings) + "/" + maxTemp + "/" + minTemp);
